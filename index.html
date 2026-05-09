@@ -38,29 +38,17 @@
             margin: 2px;
         }
 
+        .tabs-container {
+            text-align: center;
+        }
 
+        .tab-row {
+            margin-bottom: 10px;
+        }
 
-
-
-        
-
-.tabs-container {
-  text-align: center;
-}
-
-.tab-row {
-  margin-bottom: 10px;
-}
-
-.tab {
-  margin: 4px;
-}
-
-
-
-
-
-        
+        .tab {
+            margin: 4px;
+        }
         
         .tab.active {
             background: linear-gradient(90deg, var(--gold1), var(--gold2));
@@ -69,25 +57,21 @@
             box-shadow: 0 8px 30px rgba(212, 175, 55, 0.12);
         }
 
-        /* Hover effect for better UX */
         .tab:hover {
             border-color: rgba(255, 255, 255, 0.1);
             transform: translateY(-1px);
         }
 
-        /* Tablet styles */
         @media (min-width: 768px) {
             .tabs-scroll {
                 justify-content: flex-start;
             }
-
             .tab {
                 padding: 12px 20px;
                 font-size: 15px;
             }
         }
 
-        /* Desktop styles */
         @media (min-width: 1024px) {
             .tab {
                 padding: 12px 24px;
@@ -95,40 +79,25 @@
             }
         }
 
-        /* Mobile-specific adjustments */
         @media (max-width: 767px) {
             .tab {
                 padding: 8px 14px;
                 font-size: 13px;
             }
-
             .tabs-scroll {
                 justify-content: center;
             }
         }
 
-        /* Small mobile devices */
         @media (max-width: 480px) {
             .tab {
                 padding: 6px 12px;
                 font-size: 12px;
             }
-
             .tabs-scroll {
                 gap: 5px;
             }
         }
-
-
-
-
-
-
-
-
-
-
-
 
         :root {
             --bg: #0b0b0d;
@@ -169,7 +138,6 @@
             overflow-x: hidden;
         }
 
-        /* Background image layer */
         body::before {
             content: "";
             position: absolute;
@@ -320,7 +288,7 @@
             border: 2px solid #c62828;
         }
 
-        /* Location Link Section - Added at bottom */
+        /* Location Link Section */
         .location-link-section {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 12px;
@@ -445,12 +413,6 @@
             width: 100%;
         }
 
-        /* Tabs Navigation */
-        .tabs-container {
-            position: relative;
-            margin-bottom: 10px;
-        }
-
         .tabs-scroll {
             display: flex;
             gap: 8px;
@@ -462,25 +424,6 @@
 
         .tabs-scroll::-webkit-scrollbar {
             display: none;
-        }
-
-        .tab {
-            padding: 10px 16px;
-            border-radius: 999px;
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            font-size: 14px;
-            color: var(--muted);
-            cursor: pointer;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-
-        .tab.active {
-            background: var(--accent);
-            color: #0b0b0d;
-            border: none;
-            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.12);
         }
 
         /* Menu Grid */
@@ -581,7 +524,6 @@
             background: transparent;
         }
 
-        /* Add to Cart Button */
         .btn-primary {
             background: linear-gradient(90deg, var(--gold1), var(--gold2));
             border: none;
@@ -608,7 +550,6 @@
             transform: translateY(0) scale(0.95);
         }
 
-        /* Button Animation Effects */
         .btn-primary.adding {
             animation: addPulse 0.6s ease;
         }
@@ -619,47 +560,17 @@
         }
 
         @keyframes addPulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
-            }
-
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-            }
-
-            100% {
-                transform: scale(1);
-                box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
-            }
+            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15); }
+            50% { transform: scale(1.05); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3); }
+            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15); }
         }
 
         @keyframes successPulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15);
-            }
-
-            25% {
-                transform: scale(1.08);
-                box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
-            }
-
-            50% {
-                transform: scale(0.95);
-                box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
-            }
-
-            75% {
-                transform: scale(1.03);
-                box-shadow: 0 7px 25px rgba(16, 185, 129, 0.35);
-            }
-
-            100% {
-                transform: scale(1);
-                box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15);
-            }
+            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15); }
+            25% { transform: scale(1.08); box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4); }
+            50% { transform: scale(0.95); box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3); }
+            75% { transform: scale(1.03); box-shadow: 0 7px 25px rgba(16, 185, 129, 0.35); }
+            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(16, 185, 129, 0.15); }
         }
 
         /* Cart Styles */
@@ -826,18 +737,36 @@
             padding: 20px 0;
         }
 
-        .cart-total {
+        /* GST & Total Styles */
+        .cart-subtotal, .cart-gst, .cart-final {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-            font-weight: 600;
-            font-size: 18px;
+            padding: 8px 0;
         }
-
-        .total-amount {
+        
+        .cart-subtotal {
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            padding-top: 12px;
+        }
+        
+        .cart-gst {
+            color: var(--muted);
+            font-size: 14px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .cart-final {
+            font-weight: 700;
+            font-size: 18px;
+            padding: 12px 0;
+        }
+        
+        .final-amount {
             color: var(--gold2);
+            font-size: 20px;
         }
 
         .cart-actions {
@@ -847,7 +776,6 @@
             margin-top: 16px;
         }
 
-        /* Add Another Item Button */
         .btn-add-another {
             background: linear-gradient(90deg, rgba(212, 175, 55, 0.1), rgba(255, 204, 102, 0.1));
             border: 1px solid rgba(212, 175, 55, 0.3);
@@ -962,7 +890,6 @@
             height: 18px;
         }
 
-        /* Delivery Forms */
         .delivery-form {
             display: none;
             animation: fadeIn 0.5s ease;
@@ -973,15 +900,8 @@
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .form-group {
@@ -1017,7 +937,6 @@
             color: rgba(255, 255, 255, 0.3);
         }
 
-        /* Customer Details Summary */
         .customer-details-summary {
             background: rgba(255, 255, 255, 0.02);
             border-radius: 8px;
@@ -1056,7 +975,6 @@
             margin-bottom: 5px;
         }
 
-        /* Footer */
         .footer {
             text-align: center;
             padding: 20px 0;
@@ -1066,7 +984,6 @@
             margin-top: 20px;
         }
 
-        /* Gold Line */
         .gold-line {
             height: 3px;
             border-radius: 999px;
@@ -1075,66 +992,24 @@
             margin: 8px 0 16px 0;
         }
 
-        /* Tablet and Desktop Styles */
         @media (min-width: 768px) {
-            body {
-                padding: 24px;
-            }
-
-            .container {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 24px;
-                align-items: start;
-            }
-
-            .header {
-                grid-column: 1 / -1;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .brand {
-                flex: 1;
-            }
-
-            .search-container {
-                width: auto;
-                min-width: 300px;
-            }
-
-            .tabs-container {
-                grid-column: 1 / -1;
-            }
-
-            .menu-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .cart-actions {
-                flex-direction: row;
-            }
+            body { padding: 24px; }
+            .container { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start; }
+            .header { grid-column: 1 / -1; flex-direction: row; justify-content: space-between; align-items: center; }
+            .brand { flex: 1; }
+            .search-container { width: auto; min-width: 300px; }
+            .tabs-container { grid-column: 1 / -1; }
+            .menu-grid { grid-template-columns: repeat(2, 1fr); }
+            .cart-actions { flex-direction: row; }
         }
 
         @media (min-width: 1024px) {
-            .menu-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .menu-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
-        /* Print Styles */
         @media print {
-            body {
-                background: white;
-                color: black;
-            }  
-   
-            .cart-container,   
-            .cart-modal,
-            .btn-ghost {
-                display: none;    
-            }    
+            body { background: white; color: black; }
+            .cart-container, .cart-modal, .btn-ghost { display: none; }
         }
     </style>
 </head>
@@ -1143,93 +1018,40 @@
     <div class="container">  
         <!-- Cafe Header - Original Style -->
         <div class="cafe-header">
-<img src="logo.png" alt="Logo" style="width:400px; height:auto; display:block; margin:0 auto;">
+            <img src="logo.png" alt="Logo" style="width:400px; height:auto; display:block; margin:0 auto;">
             <div class="cafe-name">Zaika Fast Food </div>
             <div class="cafe-subtitle"><h1>& Restaurant</h1></div>
             <div class="location-info">
                 <div class="location-text"></div>
                 <div class="address"></div>
-                            <div class="cafe-subtitle"></div>
-                           <div class="cafe-subtitle"></div>
+                <div class="cafe-subtitle"></div>
+                <div class="cafe-subtitle"></div>
                 <div class="mobile-numbers"><br> Mo no.+91 8406803777</div>
             </div>
             <div class="veg-nonveg">
-                <div class="veg">
-                    <span class="symbol"></span>
-                    <span>VEG</span>
-                </div>
-                 <div class="nonveg">
-                    <span class="symbol"></span>
-                    <span>NON VEG</span>
-                </div>
+                <div class="veg"><span class="symbol"></span><span>VEG</span></div>
+                <div class="nonveg"><span class="symbol"></span><span>NON VEG</span></div>
             </div>
         </div>
 
-<!-- <div class="insta-link-container">
-//     <a href="https://www.instagram.com/ramdev_punjabi_tadka_ambach?igsh=eWFldmRxczExZWNj" target="_blank" class="insta-btn"> -->
-       <!-- <svg viewBox="121010" fill="currentColor"> -->
-          <!-- <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-//         Follow us on Instagram
-//     </a>
-// </div> -->
-
-<!-- Home Delivery & GST Details -->
-<div style="max-width:500px; margin:20px auto; background:#fff8e7; border:3px solid #b71c1c; border-radius:18px; padding:20px; text-align:center; font-family:Arial,sans-serif; box-shadow:0 4px 12px rgba(0,0,0,0.18);">
-
-    <h2 style="margin-top:0; color:#b71c1c; font-size:30px; letter-spacing:1px;">
-        🚚 Free Home Delivery
-    </h2>
-
-    <div style="background:#c62828; color:white; padding:12px; border-radius:12px; margin-top:15px; font-size:19px; font-weight:bold;">
-        Min 300+ Order required for upto 3 km home delivery order
-    </div>
-
-    <div style="margin-top:20px; background:#fff; border-radius:12px; padding:15px; border:2px dashed #c62828;">
-
-        <p style="margin:10px 0; font-size:18px; color:#333; font-weight:bold;">
-            ✅ Upto 1.5 km Order Above ₹300/-
-        </p>
-
-        <p style="margin:10px 0; font-size:18px; color:#333; font-weight:bold;">
-            ✅ Upto 3 km Order Above ₹550/-
-        </p>
-
-        <p style="margin:10px 0; font-size:18px; color:#333; font-weight:bold;">
-            ✅ Upto 5 km Order Above ₹1100/-
-        </p>
-
-        <p style="margin:10px 0; font-size:18px; color:#333; font-weight:bold;">
-            ✅ Upto 8 km Order Above ₹1500/-
-        </p>
-
-    </div>
-
-    <div style="margin-top:20px; background:#2e7d32; color:white; padding:12px; border-radius:12px; font-size:18px; font-weight:bold;">
-        ⏰ Delivery Timing : 10:00 AM to 10:00 PM
-    </div>
-
-    <!-- GST Note -->
-    <div style="margin-top:20px; background:#fff3f3; border:2px solid #b71c1c; border-radius:12px; padding:15px;">
-
-        <h3 style="margin-top:0; color:#b71c1c; font-size:24px;">
-            🧾 GST Information
-        </h3>
-
-        <p style="margin:8px 0; font-size:17px; color:#333; font-weight:bold;">
-            2.5% CGST
-        </p>
-
-        <p style="margin:8px 0; font-size:17px; color:#333; font-weight:bold;">
-            2.5% SGST
-        </p>
-
-        <p style="margin:12px 0 0; font-size:18px; color:#b71c1c; font-weight:bold;">
-            Total 5% GST Included On All Total Bill
-        </p>
-
-    </div>
-
-</div>
+        <!-- Home Delivery & GST Details -->
+        <div style="max-width:500px; margin:20px auto; background:#fff8e7; border:3px solid #b71c1c; border-radius:18px; padding:20px; text-align:center; font-family:Arial,sans-serif; box-shadow:0 4px 12px rgba(0,0,0,0.18);">
+            <h2 style="margin-top:0; color:#b71c1c; font-size:30px; letter-spacing:1px;">🚚 Free Home Delivery</h2>
+            <div style="background:#c62828; color:white; padding:12px; border-radius:12px; margin-top:15px; font-size:19px; font-weight:bold;">Min 300+ Order required for upto 3 km home delivery order</div>
+            <div style="margin-top:20px; background:#fff; border-radius:12px; padding:15px; border:2px dashed #c62828;">
+                <p style="margin:10px 0; font-size:18px; color:#333; font-weight:bold;">✅ Upto 1.5 km Order Above ₹300/-</p>
+                <p style="margin:10px 0; font-size:18px; color:#333; font-weight:bold;">✅ Upto 3 km Order Above ₹550/-</p>
+                <p style="margin:10px 0; font-size:18px; color:#333; font-weight:bold;">✅ Upto 5 km Order Above ₹1100/-</p>
+                <p style="margin:10px 0; font-size:18px; color:#333; font-weight:bold;">✅ Upto 8 km Order Above ₹1500/-</p>
+            </div>
+            <div style="margin-top:20px; background:#2e7d32; color:white; padding:12px; border-radius:12px; font-size:18px; font-weight:bold;">⏰ Delivery Timing : 10:00 AM to 10:00 PM</div>
+            <div style="margin-top:20px; background:#fff3f3; border:2px solid #b71c1c; border-radius:12px; padding:15px;">
+                <h3 style="margin-top:0; color:#b71c1c; font-size:24px;">🧾 GST Information</h3>
+                <p style="margin:8px 0; font-size:17px; color:#333; font-weight:bold;">2.5% CGST</p>
+                <p style="margin:8px 0; font-size:17px; color:#333; font-weight:bold;">2.5% SGST</p>
+                <p style="margin:12px 0 0; font-size:18px; color:#b71c1c; font-weight:bold;">Total 5% GST Included On All Total Bill</p>
+            </div>
+        </div>
         
         <!-- Main Menu -->
         <main class="menu">
@@ -1237,34 +1059,29 @@
                 <div class="controls">
                     <div class="search" role="search">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
-                            <path d="M21 21l-4.35-4.35" stroke="rgba(255,255,255,0.6)" stroke-width="1.6"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
-                            <circle cx="11" cy="11" r="6" stroke="rgba(255,255,255,0.6)" stroke-width="1.6"
-                                stroke-linecap="round" stroke-linejoin="round"></circle>
+                            <path d="M21 21l-4.35-4.35" stroke="rgba(255,255,255,0.6)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <circle cx="11" cy="11" r="6" stroke="rgba(255,255,255,0.6)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></circle>
                         </svg>
                         <input id="search" placeholder="Search dishes, ingredients..." />
                     </div>
-
-
-
-   <div class="tabs-scroll">
-<button class="tab active" data-cat="all">🍽️ All Items</button>
-<button class="tab" data-cat="Tea Coffee se Start Kare">☕ Tea & Coffee</button>
-<button class="tab" data-cat="Break Fast & Snacks">🥪 Snacks & Breakfast</button>
-<button class="tab" data-cat="South Indian Dishes">🍛 South Indian</button>
-<button class="tab" data-cat="Tandoori Ka Maza">🍢 Tandoori & Kababs</button>
-<button class="tab" data-cat="Soup Lijiye">🥣 Soups</button>
-<button class="tab" data-cat="Dal Bhi To Chahiye">🍲 Dal Special</button>
-<button class="tab" data-cat="Starter Indian & Chinese ke Sath">🍗 Starters & Rolls</button>
-<button class="tab" data-cat="Chowmein Bhi Chahiye">🍜 Noodles</button>
-<button class="tab" data-cat="Main Course">🥘 Main Course Veg & Non-Veg</button>
-<button class="tab" data-cat="Ab Main Course Pe Aate hai Part II">🍛 Special Gravy</button>
-<button class="tab" data-cat="Biryani Ki Kya Baat">🍚 Biryani Special</button>
-<button class="tab" data-cat="Roti to lenge hi">🫓 Roti & Naan</button>
-<button class="tab" data-cat="Rice Ke bina to man hi nahi bharega">🍚 Rice & Fried Rice</button>
-<button class="tab" data-cat="Raita, Salad & Papad">🥗 Salad & Raita</button>
-<button class="tab" data-cat="Desserts To sab ko chahiye">🍰 Desserts & Sweets</button>
-       </div>  
+                    <div class="tabs-scroll">
+                        <button class="tab active" data-cat="all">🍽️ All Items</button>
+                        <button class="tab" data-cat="Tea Coffee se Start Kare">☕ Tea & Coffee</button>
+                        <button class="tab" data-cat="Break Fast & Snacks">🥪 Snacks & Breakfast</button>
+                        <button class="tab" data-cat="South Indian Dishes">🍛 South Indian</button>
+                        <button class="tab" data-cat="Tandoori Ka Maza">🍢 Tandoori & Kababs</button>
+                        <button class="tab" data-cat="Soup Lijiye">🥣 Soups</button>
+                        <button class="tab" data-cat="Dal Bhi To Chahiye">🍲 Dal Special</button>
+                        <button class="tab" data-cat="Starter Indian & Chinese ke Sath">🍗 Starters & Rolls</button>
+                        <button class="tab" data-cat="Chowmein Bhi Chahiye">🍜 Noodles</button>
+                        <button class="tab" data-cat="Main Course">🥘 Main Course Veg & Non-Veg</button>
+                        <button class="tab" data-cat="Ab Main Course Pe Aate hai Part II">🍛 Special Gravy</button>
+                        <button class="tab" data-cat="Biryani Ki Kya Baat">🍚 Biryani Special</button>
+                        <button class="tab" data-cat="Roti to lenge hi">🫓 Roti & Naan</button>
+                        <button class="tab" data-cat="Rice Ke bina to man hi nahi bharega">🍚 Rice & Fried Rice</button>
+                        <button class="tab" data-cat="Raita, Salad & Papad">🥗 Salad & Raita</button>
+                        <button class="tab" data-cat="Desserts To sab ko chahiye">🍰 Desserts & Sweets</button>
+                    </div>
                 </div>
             </div>
 
@@ -1273,7 +1090,7 @@
             </section>
         </main>
 
-        <!-- Location Link Section - Added at bottom -->
+        <!-- Location Link Section -->
         <div class="location-link-section">
             <div class="location-link-header">
                 <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1318,41 +1135,34 @@
             <div class="delivery-options">
                 <h4 class="options-title">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path
-                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                        <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                     </svg>
                     Select Delivery Type
                 </h4>
 
                 <div class="delivery-option-buttons">
-                    <button class="option-btn active" id="restaurantOption"
-                        onclick="selectDeliveryOption('restaurant')">
+                    <button class="option-btn active" id="restaurantOption">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M9 12v12M15 12v12M5 12l-2 9h18l-2-9M5 12V8c0-1.105.895-2 2-2h10c1.105 0 2 .895 2 2v4" />
+                            <path d="M9 12v12M15 12v12M5 12l-2 9h18l-2-9M5 12V8c0-1.105.895-2 2-2h10c1.105 0 2 .895 2 2v4" />
                             <circle cx="12" cy="6" r="2" />
                         </svg>
                         Restaurant
                     </button>
-                    <button class="option-btn" id="homeDeliveryOption" onclick="selectDeliveryOption('home')">
+                    <button class="option-btn" id="homeDeliveryOption">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                         Home Delivery
                     </button>
                 </div>
 
-                <!-- Restaurant Form -->
                 <div class="delivery-form active" id="restaurantForm">
                     <div class="form-group">
                         <label class="form-label" for="tableNumber">Table Number</label>
-                        <input type="text" id="tableNumber" class="form-input"
-                            placeholder="Enter your table number (e.g., Table 5, Booth 2)" />
+                        <input type="text" id="tableNumber" class="form-input" placeholder="Enter your table number" />
                     </div>
                 </div>
 
-                <!-- Home Delivery Form -->
                 <div class="delivery-form" id="homeDeliveryForm">
                     <div class="form-group">
                         <label class="form-label" for="customerName">Full Name</label>
@@ -1360,30 +1170,35 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="customerMobile">Mobile Number</label>
-                        <input type="tel" id="customerMobile" class="form-input"
-                            placeholder="Enter your mobile number" />
+                        <input type="tel" id="customerMobile" class="form-input" placeholder="Enter your mobile number" />
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="customerAddress">Delivery Address</label>
-                        <textarea id="customerAddress" class="form-input" placeholder="Enter your complete address"
-                            rows="3"></textarea>
+                        <textarea id="customerAddress" class="form-input" placeholder="Enter your complete address" rows="3"></textarea>
                     </div>
                 </div>
             </div>
 
-            <!-- Customer Details Summary -->
-            <div class="customer-details-summary" id="customerDetailsSummary">
-                <!-- Will be populated by JavaScript -->
-            </div>
+            <div class="customer-details-summary" id="customerDetailsSummary"></div>
 
             <div class="cart-items" id="cartItems">
-                <!-- Cart items will be inserted here -->
                 <div class="cart-empty" id="cartEmpty">Your cart is empty</div>
             </div>
 
-            <div class="cart-total">
-                <span>Total:</span>
-                <span class="total-amount" id="cartTotal">₹0</span>
+            <!-- GST & Total Section - 5% GST automatic calculation -->
+            <div id="cartTotalsSection">
+                <div class="cart-subtotal">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">₹0</span>
+                </div>
+                <div class="cart-gst">
+                    <span>GST (5%):</span>
+                    <span id="cartGstAmount">₹0</span>
+                </div>
+                <div class="cart-final">
+                    <span>Final Amount With GST:</span>
+                    <span class="final-amount" id="cartFinalTotal">₹0</span>
+                </div>
             </div>
 
             <div class="cart-actions">
@@ -1396,8 +1211,7 @@
                 <button class="btn-clear" id="clearCart">Clear Cart</button>
                 <button class="btn-whatsapp" id="whatsappOrder">  
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                        <path
-                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.864 3.488" />
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.864 3.488" />
                     </svg>
                     Order via WhatsApp
                 </button>
@@ -1406,8 +1220,8 @@
     </div>
 
     <script>
-        // Menu Data - FIXED VERSION
-        const data = [
+        // Full Menu Data (keeping all original items)
+        const menuData = [
 
 {"id": 1, "cat": "Tea Coffee se Start Kare", "name": "Tea | चहा", "price": "Rs. 35", "desc": "Refreshing hot tea[cite: 1].", "tags": ["Veg", "Beverage"], "img": "img/tea.jpg"},
 {"id": 2, "cat": "Tea Coffee se Start Kare", "name": "Masala Tea | मसाला चहा", "price": "Rs. 30", "desc": "Spiced Indian tea[cite: 1].", "tags": ["Veg", "Beverage"], "img": "img/masala_tea.jpg"},
@@ -1605,379 +1419,157 @@
 {"id": 224, "cat": "Desserts To sab ko chahiye", "name": "Rasmalai | रसमलाई", "price": "Rs. 60", "desc": "Cheese patties in sweetened, thickened milk[cite: 1].", "tags": ["Veg", "Dessert"], "img": "img/rasmalai.jpg"},
 {"id": 225, "cat": "Desserts To sab ko chahiye", "name": "Gajar Ka Halwa | गाजर का हलवा", "price": "Rs. 90", "desc": "Rich and delicious carrot pudding[cite: 1].", "tags": ["Veg", "Dessert"], "img": "img/gajar_halwa.jpg"},
 {"id": 226, "cat": "Desserts To sab ko chahiye", "name": "Ice Cream | आईस्क्रीम", "price": "Rs. 60", "desc": "Your choice of chilled ice cream scoop[cite: 1].", "tags": ["Veg", "Dessert"], "img": "img/ice_cream.jpg"},
-
-          
-          
-          
-
-          
-          
-   ];
+              
+        ];
         
-        // Cart functionality    
         let cart = [];
-        let deliveryType = 'restaurant'; // Default to restaurant
-        const cartButton = document.getElementById('cartButton');
-        const cartModal = document.getElementById('cartModal');
-        const closeCart = document.getElementById('closeCart');
-        const cartItems = document.getElementById('cartItems');
-        const cartEmpty = document.getElementById('cartEmpty');
-        const cartCount = document.getElementById('cartCount');
-        const cartTotal = document.getElementById('cartTotal');
-        const clearCart = document.getElementById('clearCart');
-        const whatsappOrder = document.getElementById('whatsappOrder');
-        const addAnotherItem = document.getElementById('addAnotherItem');
-        const customerDetailsSummary = document.getElementById('customerDetailsSummary');
-
-        // Helper function to extract numeric price from price string
-        function extractPrice(priceString) {
-            // Remove 'Rs.', '₹', '/-', spaces and any other non-numeric characters except decimal
-            let numericString = priceString.replace(/Rs\.|₹|\/|-|\s/g, '');
-            let price = parseFloat(numericString);
-            return isNaN(price) ? 0 : price;
+        let deliveryType = 'restaurant';
+        
+        function extractPrice(priceStr) {
+            let num = parseFloat(priceStr.replace(/Rs\.|₹|\/|-/g, ''));
+            return isNaN(num) ? 0 : num;
         }
-
-        // Delivery option selection
-        function selectDeliveryOption(type) {
-            deliveryType = type;
-
-            // Update button states
-            document.getElementById('restaurantOption').classList.toggle('active', type === 'restaurant');
-            document.getElementById('homeDeliveryOption').classList.toggle('active', type === 'home');
-
-            // Show/hide forms
-            document.getElementById('restaurantForm').classList.toggle('active', type === 'restaurant');
-            document.getElementById('homeDeliveryForm').classList.toggle('active', type === 'home');
-
-            // Update details summary
-            updateCustomerDetailsSummary();
+        
+        function calculateTotals() {
+            let subtotal = cart.reduce((sum, item) => sum + (extractPrice(item.price) * item.quantity), 0);
+            let gst = subtotal * 0.05;
+            let finalTotal = subtotal + gst;
+            return { subtotal, gst, finalTotal };
         }
-
-        // Update customer details summary
-        function updateCustomerDetailsSummary() {
-            let summaryHTML = '';
-            let showSummary = false;
-
-            if (deliveryType === 'restaurant') {
-                const tableNumber = document.getElementById('tableNumber').value.trim();
-
-                if (tableNumber) {
-                    showSummary = true;
-                    summaryHTML = `
-            <div class="summary-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 12v12M15 12v12M5 12l-2 9h18l-2-9M5 12V8c0-1.105.895-2 2-2h10c1.105 0 2 .895 2 2v4"/>
-                <circle cx="12" cy="6" r="2"/>
-              </svg>
-              Restaurant Order
-            </div>
-            <div class="summary-details">
-              <div><strong>Type:</strong> Dine-in</div>
-              <div><strong>Table Number:</strong> ${tableNumber}</div>
-            </div>
-          `;
-                }
+        
+        function updateCartDisplay() {
+            let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').innerText = totalItems;
+            
+            let cartItemsDiv = document.getElementById('cartItems');
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<div class="cart-empty">Your cart is empty</div>';
             } else {
-                const name = document.getElementById('customerName').value.trim();
-                const mobile = document.getElementById('customerMobile').value.trim();
-                const address = document.getElementById('customerAddress').value.trim();
-
-                if (name || mobile || address) {
-                    showSummary = true;
-                    summaryHTML = `
-            <div class="summary-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
-              </svg>
-              Delivery Order
-            </div>
-            <div class="summary-details">
-              <div><strong>Type:</strong> Home Delivery</div>
-              ${name ? `<div><strong>Name:</strong> ${name}</div>` : ''}
-              ${mobile ? `<div><strong>Mobile:</strong> ${mobile}</div>` : ''}
-              ${address ? `<div><strong>Address:</strong> ${address}</div>` : ''}
-            </div>
-          `;
-                }
+                cartItemsDiv.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div class="item-info">
+                            <div class="item-name">${item.name}</div>
+                            <div class="item-price">${item.price}</div>
+                        </div>
+                        <div class="item-quantity">
+                            <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                            <span class="quantity">${item.quantity}</span>
+                            <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+                            <button class="remove-item" onclick="removeFromCart(${item.id})">×</button>
+                        </div>
+                    </div>
+                `).join('');
             }
-
-            if (showSummary) {
-                customerDetailsSummary.innerHTML = summaryHTML;
-                customerDetailsSummary.classList.add('active');
-            } else {
-                customerDetailsSummary.classList.remove('active');
-            }
+            
+            let { subtotal, gst, finalTotal } = calculateTotals();
+            document.getElementById('cartSubtotal').innerHTML = `₹${subtotal}`;
+            document.getElementById('cartGstAmount').innerHTML = `₹${gst.toFixed(2)}`;
+            document.getElementById('cartFinalTotal').innerHTML = `₹${finalTotal.toFixed(2)}`;
         }
-
-        // Toggle cart modal
-        cartButton.addEventListener('click', () => {
-            cartModal.classList.add('open');
-            updateCustomerDetailsSummary();
-        });
-
-        closeCart.addEventListener('click', () => {
-            cartModal.classList.remove('open');
-        });
-
-        // Add to cart function with animation
+        
         function addToCart(item, button) {
-            const existingItem = cart.find(cartItem => cartItem.id === item.id);
-
-            if (existingItem) {
-                existingItem.quantity += 1;
+            let existing = cart.find(i => i.id === item.id);
+            if (existing) {
+                existing.quantity++;
             } else {
-                cart.push({
-                    id: item.id,
-                    name: item.name,
-                    price: item.price,
-                    quantity: 1
-                });
+                cart.push({ id: item.id, name: item.name, price: item.price, quantity: 1 });
             }
-
-            updateCart();
-
-            // Animation effect
-            button.classList.add('adding');
-            button.innerHTML = 'Adding...';
-
-            setTimeout(() => {
-                button.classList.remove('adding');
-                button.classList.add('added');
-                button.innerHTML = '✓ Added';
-
+            updateCartDisplay();
+            
+            if (button) {
+                button.classList.add('adding');
+                button.innerHTML = 'Adding...';
                 setTimeout(() => {
-                    button.classList.remove('added');
-                    button.innerHTML = 'Add to Cart';
-                }, 1000);
-            }, 500);
+                    button.classList.remove('adding');
+                    button.classList.add('added');
+                    button.innerHTML = '✓ Added';
+                    setTimeout(() => {
+                        button.classList.remove('added');
+                        button.innerHTML = 'Add to Cart';
+                    }, 1000);
+                }, 500);
+            }
         }
-
-        // Remove from cart function
+        
         function removeFromCart(itemId) {
             cart = cart.filter(item => item.id !== itemId);
-            updateCart();
+            updateCartDisplay();
         }
-
-        // Update quantity function
+        
         function updateQuantity(itemId, change) {
-            const item = cart.find(item => item.id === itemId);
-
+            let item = cart.find(i => i.id === itemId);
             if (item) {
                 item.quantity += change;
-
                 if (item.quantity <= 0) {
                     removeFromCart(itemId);
                 } else {
-                    updateCart();
+                    updateCartDisplay();
                 }
             }
         }
-
-        // Update cart display
-        function updateCart() {
-            // Update cart count
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            cartCount.textContent = totalItems;
-
-            // Update cart items
-            if (cart.length === 0) {
-                cartEmpty.style.display = 'block';
-                cartItems.innerHTML = '';
-                cartTotal.textContent = '₹0';
-            } else {
-                cartEmpty.style.display = 'none';
-
-                let itemsHTML = '';
-                let totalAmount = 0;
-
-                cart.forEach(item => {
-                    const price = extractPrice(item.price);
-                    const itemTotal = price * item.quantity;
-                    totalAmount += itemTotal;
-
-                    itemsHTML += `
-            <div class="cart-item">
-              <div class="item-info">
-                <div class="item-name">${item.name}</div>
-                <div class="item-price">${item.price}</div>
-              </div>
-              <div class="item-quantity">
-                <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
-                <span class="quantity">${item.quantity}</span>
-                <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
-                <button class="remove-item" onclick="removeFromCart(${item.id})">×</button>
-              </div>
-            </div>
-          `;
-                });
-
-                cartItems.innerHTML = itemsHTML;
-                cartTotal.textContent = `₹${totalAmount}`;
-            }
+        
+        function selectDeliveryOption(type) {
+            deliveryType = type;
+            document.getElementById('restaurantOption').classList.toggle('active', type === 'restaurant');
+            document.getElementById('homeDeliveryOption').classList.toggle('active', type === 'home');
+            document.getElementById('restaurantForm').classList.toggle('active', type === 'restaurant');
+            document.getElementById('homeDeliveryForm').classList.toggle('active', type === 'home');
         }
-
-        // Clear cart
-        clearCart.addEventListener('click', () => {
-            cart = [];
-            updateCart();
-        });
-
-        // Add another item button functionality
-        addAnotherItem.addEventListener('click', () => {
-            cartModal.classList.remove('open');
-            
-            // Scroll to top of menu
-            window.scrollTo({
-                top: document.querySelector('.menu-head').offsetTop - 20,
-                behavior: 'smooth'
-            });
-            
-            // Focus on search to help user find items
-            setTimeout(() => {
-                document.getElementById('search').focus();
-            }, 500);
-        });
-
-        // WhatsApp order function with customer details
-        whatsappOrder.addEventListener('click', () => {
-            if (cart.length === 0) {
-                alert('Your cart is empty!');
-                return;
-            }
-
-            // Validate details based on delivery type
-            let validationPassed = true;
-            let validationMessage = '';
-
-            if (deliveryType === 'restaurant') {
-                const tableNumber = document.getElementById('tableNumber').value.trim();
-
-                if (!tableNumber) {
-                    validationPassed = false;
-                    validationMessage = 'Please enter your table number';
-                }
-            } else {
-                const customerName = document.getElementById('customerName').value.trim();
-                const customerMobile = document.getElementById('customerMobile').value.trim();
-                const customerAddress = document.getElementById('customerAddress').value.trim();
-
-                if (!customerName || !customerMobile || !customerAddress) {
-                    validationPassed = false;
-                    validationMessage = 'Please fill in all delivery details (Name, Mobile, Address)';
-                }
-            }
-
-            if (!validationPassed) {
-                alert(validationMessage);
-                return;
-            }
-
-            let message = `Hello! I would like to place an order:\n\n`;
-
-            // Add delivery details
-            if (deliveryType === 'restaurant') {
-                const tableNumber = document.getElementById('tableNumber').value.trim();
-
-                message += `**Delivery Type:** Dine-in\n`;
-                message += `**Table Number:** ${tableNumber}\n\n`;
-            } else {
-                const customerName = document.getElementById('customerName').value.trim();
-                const customerMobile = document.getElementById('customerMobile').value.trim();
-                const customerAddress = document.getElementById('customerAddress').value.trim();
-
-                message += `**Delivery Type:** Home Delivery\n`;
-                message += `**Name:** ${customerName}\n`;
-                message += `**Mobile:** ${customerMobile}\n`;
-                message += `**Address:** ${customerAddress}\n\n`;
-            }
-
-            message += `**Order Details:**\n`;
-
-            cart.forEach(item => {
-                message += `• ${item.name} - ${item.quantity} x ${item.price}\n`;
-            });
-
-            const totalAmount = cart.reduce((sum, item) => {
-                const price = extractPrice(item.price);
-                return sum + (price * item.quantity);
-            }, 0);
-
-            message += `\n**Total Amount:** ₹${totalAmount}\n\n`;
-            message += `Thank you!`;
-
-            // Encode the message for WhatsApp URL
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappURL = `https://wa.me/918406803777?text=${encodedMessage}`;
-
-            // Open WhatsApp in a new tab
-            window.open(whatsappURL, '_blank');
-
-            // Close cart modal after order
-            setTimeout(() => {
-                cartModal.classList.remove('open');
-            }, 1000);
-        });
-
-        // Render menu items
-        function renderMenuItems(items) {
-            const menuGrid = document.getElementById('menuGrid');
-
+        
+        function renderMenu(items) {
+            let grid = document.getElementById('menuGrid');
             if (items.length === 0) {
-                menuGrid.innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1;padding:40px 20px">No items found</p>';
+                grid.innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1;padding:40px">No items found</p>';
                 return;
             }
-
-            menuGrid.innerHTML = items.map(item => `
-        <div class="card" data-cat="${item.cat}">
-          <div class="card-header">
-            <div class="thumb">
-              <img src="${item.img}" alt="${item.name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDMpIi8+CjxwYXRoIGQ9Ik03MCA4MEgxMTBNODAgNzBWOTBNNjUgOTVIMTA1TTk1IDY1VjEwNU02NSA2NVYxMDVNNzUgNzVIOThNNzUgODVIOThNNzUgOTVIOThNNzUgMTA1SDk4TTY1IDc1SDcyTTY1IDg1SDcyTTY1IDk1SDcyTTY1IDEwNUg3Mk0xMDggNzVIMTE1TTEwOCA4NUgxMTVNMTA4IDk1SDExNU0xMDggMTA1SDExNSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+'">
-            </div>
-            <div class="card-info">
-              <h3 class="dish">${item.name}</h3>
-              <p class="desc">${item.desc}</p>
-              <div class="tags">
-                ${item.tags.map(tag => `<span class="pill">${tag}</span>`).join('')}
-              </div>
-            </div>
-          </div>
-          <div class="card-footer">
-            <div class="price">${item.price}</div>
-            <button class="btn-primary" onclick="addToCart(${JSON.stringify(item).replace(/"/g, '&quot;')}, this)">Add to Cart</button>
-          </div>
-        </div>
-      `).join('');
+            grid.innerHTML = items.map(item => `
+                <div class="card">
+                    <div class="card-header">
+                        <div class="thumb">
+                            <img src="${item.img}" alt="${item.name}" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiBmaWxsPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDMpIi8+CjxwYXRoIGQ9Ik03MCA4MEgxMTBNODAgNzBWOTBNNjUgOTVIMTA1TTk1IDY1VjEwNU02NSA2NVYxMDVNNzUgNzVIOThNNzUgODVIOThNNzUgOTVIOThNNzUgMTA1SDk4TTY1IDc1SDcyTTY1IDg1SDcyTTY1IDk1SDcyTTY1IDEwNUg3Mk0xMDggNzVIMTE1TTEwOCA4NUgxMTVNMTA4IDk1SDExNU0xMDggMTA1SDExNSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+'">
+                        </div>
+                        <div class="card-info">
+                            <h3 class="dish">${item.name}</h3>
+                            <p class="desc">${item.desc}</p>
+                            <div class="tags">${item.tags.map(t => `<span class="pill">${t}</span>`).join('')}</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price">${item.price}</div>
+                        <button class="btn-primary" onclick='addToCart(${JSON.stringify(item).replace(/'/g, "&#39;")}, this)'>Add to Cart</button>
+                    </div>
+                </div>
+            `).join('');
         }
-
-        // Filter menu items by category
+        
         function filterByCategory(category) {
             if (category === 'all') {
-                renderMenuItems(data);
+                renderMenu(menuData);
             } else {
-                const filteredItems = data.filter(item => item.cat === category);
-                renderMenuItems(filteredItems);
+                renderMenu(menuData.filter(item => item.cat === category));
             }
         }
-
-        // Search functionality
+        
         function searchItems(query) {
-            const filteredItems = data.filter(item =>
+            let filtered = menuData.filter(item => 
                 item.name.toLowerCase().includes(query.toLowerCase()) ||
                 item.desc.toLowerCase().includes(query.toLowerCase()) ||
                 item.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
             );
-            renderMenuItems(filteredItems);
+            renderMenu(filtered);
         }
-
-        // Initialize the page
+        
+        // Make functions global
+        window.addToCart = addToCart;
+        window.removeFromCart = removeFromCart;
+        window.updateQuantity = updateQuantity;
+        window.selectDeliveryOption = selectDeliveryOption;
+        
         document.addEventListener('DOMContentLoaded', () => {
-            // Set default delivery option
+            renderMenu(menuData);
             selectDeliveryOption('restaurant');
-
-            // Render menu items
-            renderMenuItems(data);
-
-            // Tab functionality
+            updateCartDisplay();
+            
             document.querySelectorAll('.tab').forEach(tab => {
                 tab.addEventListener('click', () => {
                     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -1985,25 +1577,41 @@
                     filterByCategory(tab.dataset.cat);
                 });
             });
-
-            // Search functionality
-            document.getElementById('search').addEventListener('input', (e) => {
-                searchItems(e.target.value);
+            
+            document.getElementById('search').addEventListener('input', (e) => searchItems(e.target.value));
+            document.getElementById('cartButton').addEventListener('click', () => document.getElementById('cartModal').classList.add('open'));
+            document.getElementById('closeCart').addEventListener('click', () => document.getElementById('cartModal').classList.remove('open'));
+            document.getElementById('clearCart').addEventListener('click', () => { cart = []; updateCartDisplay(); });
+            document.getElementById('addAnotherItem').addEventListener('click', () => document.getElementById('cartModal').classList.remove('open'));
+            document.getElementById('restaurantOption').addEventListener('click', () => selectDeliveryOption('restaurant'));
+            document.getElementById('homeDeliveryOption').addEventListener('click', () => selectDeliveryOption('home'));
+            
+            document.getElementById('whatsappOrder').addEventListener('click', () => {
+                if (cart.length === 0) { alert('Your cart is empty!'); return; }
+                
+                let { subtotal, gst, finalTotal } = calculateTotals();
+                let message = `Hello! I would like to place an order:\n\n`;
+                
+                if (deliveryType === 'restaurant') {
+                    let table = document.getElementById('tableNumber').value.trim();
+                    if (!table) { alert('Please enter table number'); return; }
+                    message += `Delivery Type: Dine-in\nTable Number: ${table}\n\n`;
+                } else {
+                    let name = document.getElementById('customerName').value.trim();
+                    let mobile = document.getElementById('customerMobile').value.trim();
+                    let address = document.getElementById('customerAddress').value.trim();
+                    if (!name || !mobile || !address) { alert('Please fill all delivery details'); return; }
+                    message += `Delivery Type: Home Delivery\nName: ${name}\nMobile: ${mobile}\nAddress: ${address}\n\n`;
+                }
+                
+                message += `Order Details:\n`;
+                cart.forEach(item => { message += `• ${item.name} - ${item.quantity} x ${item.price}\n`; });
+                message += `\nSubtotal: ₹${subtotal}\nGST (5%): ₹${gst.toFixed(2)}\nFinal Amount With GST: ₹${finalTotal.toFixed(2)}\n\nThank you!`;
+                
+                window.open(`https://wa.me/918406803777?text=${encodeURIComponent(message)}`, '_blank');
+                document.getElementById('cartModal').classList.remove('open');
             });
-
-            // Update details summary when form inputs change
-            document.getElementById('tableNumber').addEventListener('input', updateCustomerDetailsSummary);
-            document.getElementById('customerName').addEventListener('input', updateCustomerDetailsSummary);
-            document.getElementById('customerMobile').addEventListener('input', updateCustomerDetailsSummary);
-            document.getElementById('customerAddress').addEventListener('input', updateCustomerDetailsSummary);
         });
-
-        // Make functions available globally
-        window.addToCart = addToCart;
-        window.removeFromCart = removeFromCart;
-        window.updateQuantity = updateQuantity;
-        window.selectDeliveryOption = selectDeliveryOption;
     </script>
 </body>
-
 </html>
