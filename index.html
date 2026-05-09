@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">   
       
@@ -1240,7 +1236,7 @@
                     Open in Google Maps
                 </a>
             </div>
-        </div>
+        </div>     
     </div> 
 
     <!-- Cart Button -->
@@ -1578,6 +1574,14 @@
         const addAnotherItem = document.getElementById('addAnotherItem');
         const customerDetailsSummary = document.getElementById('customerDetailsSummary');
 
+        // Helper function to extract numeric price from price string
+        function extractPrice(priceString) {
+            // Remove 'Rs.', '₹', '/-', spaces and any other non-numeric characters except decimal
+            let numericString = priceString.replace(/Rs\.|₹|\/|-|\s/g, '');
+            let price = parseFloat(numericString);
+            return isNaN(price) ? 0 : price;
+        }
+
         // Delivery option selection
         function selectDeliveryOption(type) {
             deliveryType = type;
@@ -1724,6 +1728,7 @@
             if (cart.length === 0) {
                 cartEmpty.style.display = 'block';
                 cartItems.innerHTML = '';
+                cartTotal.textContent = '₹0';
             } else {
                 cartEmpty.style.display = 'none';
 
@@ -1731,7 +1736,7 @@
                 let totalAmount = 0;
 
                 cart.forEach(item => {
-                    const price = parseInt(item.price.replace('₹', ''));
+                    const price = extractPrice(item.price);
                     const itemTotal = price * item.quantity;
                     totalAmount += itemTotal;
 
@@ -1838,7 +1843,7 @@
             });
 
             const totalAmount = cart.reduce((sum, item) => {
-                const price = parseInt(item.price.replace('₹', ''));
+                const price = extractPrice(item.price);
                 return sum + (price * item.quantity);
             }, 0);
 
